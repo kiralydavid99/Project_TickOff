@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="732.0" prefWidth="942.0" style="-fx-background-color: #242424;" xmlns="http://javafx.com/javafx/11.0.2"  >
+   <children>
+      <VBox alignment="CENTER" layoutY="169.0" prefHeight="386.0" prefWidth="931.0" style="-fx-background-color: #242424;">
+         <children>
+            <Label prefHeight="25.0" prefWidth="288.0" style="-fx-background-color: #ffff;" text="Felahsználónév">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="243.0" layoutY="98.0" prefHeight="25.0" prefWidth="288.0" style="-fx-background-color: #ffff;" text="Jelszó">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: FF8743;" text="Belépés" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <HBox alignment="TOP_CENTER" layoutY="-1.0" prefHeight="170.0" prefWidth="942.0" style="-fx-background-color: #242424;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../java/com/example/vizsga1/tickoff_logo_login.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin></ImageView>
+         </children>
+      </HBox>
+      <VBox alignment="BOTTOM_LEFT" layoutY="447.0" prefHeight="285.0" prefWidth="478.0" style="-fx-background-color: #242424;">
+         <children>
+            <Hyperlink text="Webalkalmazás megnyitása katt ide">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="10.0" />
+               </VBox.margin>
+            </Hyperlink>
+         </children>
+      </VBox>
+      <VBox alignment="BOTTOM_RIGHT" layoutX="471.0" layoutY="462.0" prefHeight="269.0" prefWidth="471.0" style="-fx-background-color: #242424;">
+         <children>
+            <Label prefHeight="17.0" prefWidth="91.0" text="v1.0.1" textFill="#ff8743">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
