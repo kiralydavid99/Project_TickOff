@@ -1,16 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.vizsga1.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="807.0" prefWidth="1461.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="-3.0" prefHeight="814.0" prefWidth="339.0" style="-fx-background-color: #242424;">
+         <children>
+            <ImageView fitHeight="163.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../java/com/example/vizsga1/tickoff_logo_admin.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" text="Button">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="67.0" layoutY="213.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" text="Button">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="67.0" layoutY="258.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" text="Button">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="67.0" layoutY="283.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" text="Button">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="67.0" layoutY="308.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" text="Button">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <TableView layoutX="336.0" layoutY="226.0" prefHeight="583.0" prefWidth="1126.0">
+        <columns>
+          <TableColumn prefWidth="362.0" text="Felhasználó" />
+          <TableColumn prefWidth="300.0" text="XP" />
+            <TableColumn prefWidth="180.0" text="Kor" />
+            <TableColumn prefWidth="283.0" text="Regisztrácio Dátuma" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
