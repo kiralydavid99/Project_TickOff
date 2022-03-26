@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="564.0" prefWidth="753.0" style="-fx-background-color: #242424;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsga1.LoginView">
+   <children>
+      <VBox alignment="CENTER" layoutY="169.0" prefHeight="200.0" prefWidth="753.0" style="-fx-background-color: #242424;">
+         <children>
+            <Label prefHeight="25.0" prefWidth="288.0" style="-fx-background-color: #ffff;" text="Felahsználónév">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="243.0" layoutY="98.0" prefHeight="25.0" prefWidth="288.0" style="-fx-background-color: #ffff;" text="Jelszó">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: FF8743;" text="Belépés" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <HBox alignment="TOP_CENTER" layoutY="-1.0" prefHeight="170.0" prefWidth="753.0" style="-fx-background-color: #242424;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../java/com/example/vizsga1/tickoff_logo_login.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin></ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="BOTTOM_LEFT" layoutY="369.0" prefHeight="200.0" prefWidth="753.0" style="-fx-background-color: #242424;">
+         <children>
+            <Hyperlink prefHeight="23.0" prefWidth="294.0" text="Web alkalmazás megnyitása katt ide ">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="10.0" />
+               </HBox.margin>
+            </Hyperlink>
+            <Label text="v1.0.1" textFill="#ff8743">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="400.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
