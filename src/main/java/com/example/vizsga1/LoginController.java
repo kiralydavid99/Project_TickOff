@@ -1,5 +1,6 @@
 package com.example.vizsga1;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -42,7 +43,9 @@ public class LoginController {
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
+            stage.onCloseRequestProperty().setValue(e -> Platform.exit());
             stage.show();
+
         } catch(Exception e) {
                 e.printStackTrace();
         }
