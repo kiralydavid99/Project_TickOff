@@ -12,7 +12,7 @@
          <children>
             <ImageView fitHeight="163.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../java/com/example/vizsga1/tickoff_logo_admin.png" />
+                  <Image url="@tickoff_logo_admin.png" />
                </image>
                <VBox.margin>
                   <Insets top="20.0" />

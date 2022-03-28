@@ -5,45 +5,41 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="732.0" prefWidth="942.0" style="-fx-background-color: #242424;" xmlns="http://javafx.com/javafx/11.0.2"  >
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #242424;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsga1.LoginController">
    <children>
-      <VBox alignment="CENTER" layoutY="169.0" prefHeight="386.0" prefWidth="931.0" style="-fx-background-color: #242424;">
+      <VBox alignment="CENTER" layoutX="-3.0" layoutY="273.0" prefHeight="190.0" prefWidth="1280.0" style="-fx-background-color: #242424;">
          <children>
-            <Label prefHeight="25.0" prefWidth="288.0" style="-fx-background-color: #ffff;" text="Felahsználónév">
-               <VBox.margin>
+            <TextField fx:id="felhasznalonev" alignment="CENTER" layoutX="10.0" layoutY="69.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Felhasználónév" VBox.vgrow="NEVER">
+               <opaqueInsets>
                   <Insets />
-               </VBox.margin>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </Label>
-            <Label layoutX="243.0" layoutY="98.0" prefHeight="25.0" prefWidth="288.0" style="-fx-background-color: #ffff;" text="Jelszó">
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="jelszo" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Jelszó">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
                <VBox.margin>
                   <Insets top="20.0" />
-               </VBox.margin>
-            </Label>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: FF8743;" text="Belépés" textFill="WHITE">
+               </VBox.margin></TextField>
+            <Button mnemonicParsing="false" onAction="#LoginButtonClick" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: FF8743;" text="Belépés" textFill="WHITE">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
             </Button>
          </children>
       </VBox>
-      <HBox alignment="TOP_CENTER" layoutY="-1.0" prefHeight="170.0" prefWidth="942.0" style="-fx-background-color: #242424;">
+      <HBox alignment="BOTTOM_CENTER" layoutY="-1.0" prefHeight="285.0" prefWidth="1283.0" style="-fx-background-color: #242424;">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../java/com/example/vizsga1/tickoff_logo_login.png" />
+                  <Image url="@tickoff_logo_login.png" />
                </image>
                <HBox.margin>
                   <Insets top="20.0" />
                </HBox.margin></ImageView>
          </children>
       </HBox>
-      <VBox alignment="BOTTOM_LEFT" layoutY="447.0" prefHeight="285.0" prefWidth="478.0" style="-fx-background-color: #242424;">
+      <VBox alignment="BOTTOM_LEFT" layoutY="510.0" prefHeight="222.0" prefWidth="706.0" style="-fx-background-color: #242424;">
          <children>
             <Hyperlink text="Webalkalmazás megnyitása katt ide">
                <VBox.margin>
@@ -52,7 +48,7 @@
             </Hyperlink>
          </children>
       </VBox>
-      <VBox alignment="BOTTOM_RIGHT" layoutX="471.0" layoutY="462.0" prefHeight="269.0" prefWidth="471.0" style="-fx-background-color: #242424;">
+      <VBox alignment="BOTTOM_RIGHT" layoutX="471.0" layoutY="462.0" prefHeight="269.0" prefWidth="812.0" style="-fx-background-color: #242424;">
          <children>
             <Label prefHeight="17.0" prefWidth="91.0" text="v1.0.1" textFill="#ff8743">
                <VBox.margin>
