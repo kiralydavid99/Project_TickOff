@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="807.0" prefWidth="1461.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="Anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="807.0" prefWidth="1461.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsga1.DashboardController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="-3.0" prefHeight="814.0" prefWidth="339.0" style="-fx-background-color: #242424;">
          <children>
@@ -18,7 +19,7 @@
                   <Insets top="20.0" />
                </VBox.margin>
             </ImageView>
-            <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="339.0" style="-fx-background-color: #242424;" text="Button" textFill="#ff8743">
+            <Button mnemonicParsing="false" onAction="#Regisztracio" prefHeight="48.0" prefWidth="339.0" style="-fx-background-color: #242424;" text="Button" textFill="#ff8743">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
@@ -28,7 +29,7 @@
             </Button>
          </children>
       </VBox>
-      <TableView layoutX="335.0" layoutY="231.0" prefHeight="583.0" prefWidth="1119.0">
+      <TableView fx:id="userTable" layoutX="335.0" layoutY="231.0" prefHeight="583.0" prefWidth="1119.0">
         <columns>
           <TableColumn prefWidth="362.0" text="Felhasználó" />
           <TableColumn prefWidth="300.0" text="XP" />
@@ -36,5 +37,13 @@
             <TableColumn prefWidth="283.0" text="Regisztrácio Dátuma" />
         </columns>
       </TableView>
+      <AreaChart fx:id="Statisztika" layoutX="340.0" layoutY="139.0" prefHeight="664.0" prefWidth="1119.0" visible="false">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </AreaChart>
    </children>
 </AnchorPane>

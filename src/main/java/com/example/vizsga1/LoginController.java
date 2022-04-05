@@ -14,7 +14,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class LoginController {
+public class LoginController extends Controller {
     @javafx.fxml.FXML
     private TextField jelszo;
     @javafx.fxml.FXML
@@ -30,24 +30,30 @@ public class LoginController {
         JSONObject loginJson = new JSONObject(login);
         Response loginResponse = null;
         try {
-             loginResponse = TickOffApi.login(loginJson.toString());
+             loginResponse = RequestHandler.post("https://api.tickoff.hu/login",loginJson.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if (loginResponse != null){
+        if (loginResponse != null && loginResponse.getResponseCode()<400){
             System.out.println(loginResponse.getContent());
-        }
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("dashboard-view.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.onCloseRequestProperty().setValue(e -> Platform.exit());
+                stage.show();
 
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("dashboard-view.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.onCloseRequestProperty().setValue(e -> Platform.exit());
-            stage.show();
-
-        } catch(Exception e) {
+            } catch(Exception e) {
                 e.printStackTrace();
+            }
         }
+        else{
+            JSONObject hiba = new JSONObject(loginResponse.getContent());
+            alert("Hibás felhasználónév vagy jelszó");
+
+        }
+
+
     }
 }
