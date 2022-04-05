@@ -19,7 +19,7 @@
                   <Insets top="20.0" />
                </VBox.margin>
             </ImageView>
-            <Button mnemonicParsing="false" onAction="#Regisztracio" prefHeight="48.0" prefWidth="339.0" style="-fx-background-color: #242424;" text="Button" textFill="#ff8743">
+            <Button mnemonicParsing="false" onAction="#Regisztracio" prefHeight="48.0" prefWidth="339.0" style="-fx-background-color: #242424;" text="Regisztrációs adatok" textFill="#ff8743">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
