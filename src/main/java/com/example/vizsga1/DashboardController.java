@@ -11,12 +11,12 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
+
 
 public class DashboardController {
-    private ArrayList<User> userek;
+
     @javafx.fxml.FXML
-    private TableView userTable;
+    private TableView<User> userTable;
     @javafx.fxml.FXML
     private AnchorPane Anchor;
     @javafx.fxml.FXML
@@ -24,23 +24,35 @@ public class DashboardController {
     @javafx.fxml.FXML
     private TableColumn<User,String>  Felhasznalolista;
     @javafx.fxml.FXML
-    private TableColumn<User,Integer> KorLista;
+    private TableColumn<User,String> KorLista;
     @javafx.fxml.FXML
-    private TableColumn <User,Integer>RegisztracioLista;
+    private TableColumn <User,String> RegisztracioLista;
+    @javafx.fxml.FXML
+    private TableColumn KeresztnevList;
+    @javafx.fxml.FXML
+    private TableColumn EmailcimLista;
+    @javafx.fxml.FXML
+    private TableColumn VezeteknevList;
 
     public void initialize(){
         Felhasznalolista.setCellValueFactory(new PropertyValueFactory<>("username"));
         KorLista.setCellValueFactory(new PropertyValueFactory<>("born_date"));
         RegisztracioLista.setCellValueFactory(new PropertyValueFactory<>("register_date"));
+        KeresztnevList.setCellValueFactory(new PropertyValueFactory<>("first_name"));
+        VezeteknevList.setCellValueFactory(new PropertyValueFactory<>("last_name"));
+        EmailcimLista.setCellValueFactory(new PropertyValueFactory<>("email"));
+
+
+        felhasznaloListaFeltolt();
+    }
+    private void felhasznaloListaFeltolt() {
         try {
-            userek = new ArrayList<>(Arrays.asList(TickOffApi.getFelhasznalok()));
+            ArrayList<User> userList = TickOffApi.getFelhasznalok();
+            userTable.getItems().clear();
+            for (User felhasz : userList){
+                userTable.getItems().add(felhasz);
+            }
         } catch (IOException e) {
-            e.printStackTrace();
-        }
-        userTable.getItems().clear();
-        for (User adat:
-             userek) {
-            userTable.getItems().add(adat);
 
         }
     }
@@ -54,5 +66,13 @@ public class DashboardController {
     }
 
 
+    @javafx.fxml.FXML
+    public void felhasznaloTorles(ActionEvent actionEvent) {
 
+
+    }
+
+    @javafx.fxml.FXML
+    public void felhasznaloModositas(ActionEvent actionEvent) {
+    }
 }

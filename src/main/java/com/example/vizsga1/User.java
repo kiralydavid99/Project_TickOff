@@ -1,5 +1,8 @@
 package com.example.vizsga1;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class User {
     private Integer id;
     private String username;
@@ -41,12 +44,18 @@ public class User {
         return last_name;
     }
 
-    public long getBorn_date() {
-        return born_date;
+    public String getBorn_date() {
+        Date born = new Date(this.born_date*1000);
+        SimpleDateFormat dateFormatted = new SimpleDateFormat("yyyy.MM.dd");
+
+        return dateFormatted.format(born);
     }
 
-    public long getRegister_date() {
-        return register_date;
+    public String getRegister_date() {
+        Date regiszt = new Date(this.register_date*1000);
+        SimpleDateFormat dateFormatted = new SimpleDateFormat("yyyy.MM.dd");
+
+        return dateFormatted.format(regiszt);
     }
 
     public boolean getAdmin() {return admin;}
