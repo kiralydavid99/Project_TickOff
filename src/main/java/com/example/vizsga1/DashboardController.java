@@ -8,12 +8,14 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 
-public class DashboardController {
+public class DashboardController extends Controller {
 
     @javafx.fxml.FXML
     private TableView<User> userTable;
@@ -68,6 +70,30 @@ public class DashboardController {
 
     @javafx.fxml.FXML
     public void felhasznaloTorles(ActionEvent actionEvent) {
+        int selectedIndex = userTable.getSelectionModel().getSelectedIndex();
+        if (selectedIndex == -1) {
+            alert("A törléshez előbb válasszon ki egy elemet a táblázatból");
+            return;
+        }
+        User torlendoFelhasznalo = userTable.getSelectionModel().getSelectedItem();
+        if (!confirm("Biztos hogy törölni szeretné az alábbi felhasználót?: " + torlendoFelhasznalo.getUsername())) {
+            return;
+        }
+        try {
+            String deleteString = "";
+            try {
+                deleteString = new JSONObject()
+                        .put("id", torlendoFelhasznalo.getId())
+                        .toString();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            boolean sikeres = TickOffApi.UserTorlese(deleteString);
+            alert(sikeres ? "Sikeres törlés" : "Sikertelen törlés");
+            felhasznaloListaFeltolt();
+        } catch (IOException e) {
+            hibaKiir(e);
+        }
 
 
     }

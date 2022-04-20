@@ -24,9 +24,10 @@ public class RequestHandler {
         addRequestBody(conn, data);
         return getResponse(conn);
     }
-    public static Response delete(String url) throws IOException {
+    public static Response delete(String url,String data) throws IOException {
         HttpURLConnection conn = setupConnection(url);
         conn.setRequestMethod("DELETE");
+        addRequestBody(conn,data);
         return getResponse(conn);
 
 

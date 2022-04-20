@@ -53,7 +53,7 @@ public class TickOffApi {
     }
 
     public static boolean UserTorlese(String id) throws IOException {
-        Response response = RequestHandler.delete(BASE_URL + "/delete-user" );
+        Response response = RequestHandler.delete(BASE_URL + "/delete-user",id );
 
         Gson jsonConvert = new Gson();
         String json = response.getContent();

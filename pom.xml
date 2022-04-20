@@ -52,6 +52,7 @@
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -70,7 +71,26 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.vizsga1/com.example.vizsga1.HelloApplication</mainClass>
+                            <mainClass>hu.petrik.filmdb/hu.petrik.filmdb.FilmApp</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>io.github.fvarrui</groupId>
+                <artifactId>javapackager</artifactId>
+                <version>1.6.6</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>com.example.vizsga1.Main</mainClass>
+                            <bundleJre>true</bundleJre>
+                            <platform>windows</platform>
                         </configuration>
                     </execution>
                 </executions>
