@@ -20,6 +20,10 @@ public class LoginController extends Controller {
     @javafx.fxml.FXML
     private TextField felhasznalonev;
 
+    public void initialize(){
+        RequestHandler.setup();
+    }
+
     @javafx.fxml.FXML
     public void LoginButtonClick(ActionEvent actionEvent) {
         String password = jelszo.getText();
@@ -56,4 +60,5 @@ public class LoginController extends Controller {
 
 
     }
+
 }

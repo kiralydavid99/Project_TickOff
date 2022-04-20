@@ -19,7 +19,7 @@
                   <Insets top="20.0" />
                </VBox.margin>
             </ImageView>
-            <Button mnemonicParsing="false" onAction="#Regisztracio" prefHeight="48.0" prefWidth="339.0" style="-fx-background-color: #242424;" text="Button" textFill="#ff8743">
+            <Button mnemonicParsing="false" onAction="#Regisztracio" prefHeight="48.0" prefWidth="339.0" style="-fx-background-color: #242424;" text="Regisztrációs adatok" textFill="#ff8743">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
@@ -29,15 +29,14 @@
             </Button>
          </children>
       </VBox>
-      <TableView fx:id="userTable" layoutX="335.0" layoutY="231.0" prefHeight="583.0" prefWidth="1119.0">
+      <TableView fx:id="userTable" layoutX="335.0" layoutY="231.0" prefHeight="583.0" prefWidth="1119.0" visible="false">
         <columns>
-          <TableColumn prefWidth="362.0" text="Felhasználó" />
-          <TableColumn prefWidth="300.0" text="XP" />
-            <TableColumn prefWidth="180.0" text="Kor" />
-            <TableColumn prefWidth="283.0" text="Regisztrácio Dátuma" />
+          <TableColumn fx:id="Felhasznalolista" prefWidth="362.0" text="Felhasználó" />
+            <TableColumn fx:id="KorLista" prefWidth="180.0" text="Kor" />
+            <TableColumn fx:id="RegisztracioLista" prefWidth="283.0" text="Regisztrácio Dátuma" />
         </columns>
       </TableView>
-      <AreaChart fx:id="Statisztika" layoutX="340.0" layoutY="139.0" prefHeight="664.0" prefWidth="1119.0" visible="false">
+      <AreaChart fx:id="Statisztika" layoutX="340.0" layoutY="139.0" prefHeight="664.0" prefWidth="1119.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
